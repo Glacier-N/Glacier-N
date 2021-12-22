@@ -230,4 +230,3 @@ int main(){
 	system("pause");
 	}	
 }
-
