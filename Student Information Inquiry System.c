@@ -66,14 +66,14 @@ void search(){
     char uid[30];
     gets(uid);
     int si;
-    for(si=0;si<n;si++){
+    for(si=0;si<inputn;si++){
     if(strcmp(uid,a[si].id)==0){
         printf("  ID:%s  Name:%s  Date of Birth:%04d-%02d-%02d",a[si].id,a[si].name,a[si].year,a[si].month,a[si].day);
 		printf("  Score: Chinese:%d / Math:%d / English:%d\n",a[si].chinese,a[si].math,a[si].english);
         return;
     }
     }
-    printf("\nSorry,Can't Find the Object'\n");
+    printf("\nSorry,Can't Find the Object\n");
     return ;
 }
 void change(){
@@ -81,7 +81,7 @@ void change(){
     char c[30];
     scanf("%s",c);
     int i;
-    for(i=0;i<n;i++){
+    for(i=0;i<inputn;i++){
         if(strcmp(c,a[i].id)==0){
             
                 printf("Please Choose Information Type\n");
@@ -152,6 +152,7 @@ void change(){
                         }
                 
             }
+            return ;
         }
     }
     printf("Not Found.\n");
@@ -195,8 +196,9 @@ void delete_(){
 	scanf("%s",did);
 	int di=0,aaa=0;
 	for(di;di<inputn;di++){
-		if(a[di].id==did){
-		break;aaa=1;
+		if(strcmp(a[di].id,did)==0){
+		aaa=1;
+		break;
 	}
 	}
 	if(!aaa)
@@ -218,13 +220,13 @@ int main(){
 	if(n==0)
 	return 0;
 	switch(n){
-		case 1:input();break;
-	 	case 2:output();break;
-		case 3:sort();break;
-		case 4:search();break;
-		case 5:insert();break;
-		case 6:delete_();break;
-		case 7:change();break;
+		case 1:system("cls");input();break;
+	 	case 2:system("cls");output();break;
+		case 3:system("cls");sort();break;
+		case 4:system("cls");search();break;
+		case 5:system("cls");insert();break;
+		case 6:system("cls");delete_();break;
+		case 7:system("cls");change();break;
 	}
 	printf("\n*****All Done.*****\n\n");
 	system("pause");
