@@ -16,7 +16,7 @@ int main(){
 	printf("\t\t\t\t\t%s\n",date);    
 	changecolor();    
 	return 0;
-}
+} 
 void xin(void)
 {
 	float y, x, z, f;
