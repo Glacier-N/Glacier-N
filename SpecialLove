@@ -1,0 +1,68 @@
+#include <stdio.h>
+void changecolor(void);
+void xin(void);
+
+int main(){
+    char love[50],name[50],date[50];
+	printf("请输入表白话语："); 
+	scanf("%s",love);
+	printf("请签署你的名字:");
+	scanf("%s",name);
+	printf("请写上日期：");
+	scanf("%s",date);    
+	xin();    
+	printf("\t\t\t\t%s\n",love);    
+	printf("\t\t\t\t\t%s\n",name);    
+	printf("\t\t\t\t\t%s\n",date);    
+	changecolor();    
+	return 0;
+}
+void xin(void)
+{
+	float y, x, z, f;
+	for (y = 1.5f; y > -1.1f; y-=0.1f){
+	    for (x = -1.5f; x < 1.5f; x += 0.05f){
+		    z = x*x + y*y -1;
+			    f = z*z*z - x*x*y*y*y;      
+				    putchar(f <= 0.0f ? "*********"[(int)(f*-8.0f)]:' ');
+	}
+	putchar('\n');    
+	}
+}
+void changecolor(void)
+{
+	long time;
+	for(; ;){
+		system("color ba");
+		for(time=0;time<99999999;time++);
+			system("color bb");
+		for(time=0;time<99999999;time++);
+			system("color bc");
+		for(time=0;time<99999999;time++);
+			system("color bd");
+		for(time=0;time<99999999;time++);
+			system("color be");
+		for(time=0;time<99999999;time++);
+			system("color bf");
+		for(time=0;time<99999999;time++);
+			system("color b0");
+		for(time=0;time<99999999;time++);
+			system("color b1");
+		for(time=0;time<99999999;time++);
+			system("color b2");
+		for(time=0;time<99999999;time++);
+			system("color b3");
+		for(time=0;time<99999999;time++);
+			system("color b4");
+		for(time=0;time<99999999;time++);
+			system("color b5");
+		for(time=0;time<99999999;time++);
+			system("color b6");
+		for(time=0;time<99999999;time++);
+			system("color b7");
+		for(time=0;time<99999999;time++);
+			system("color b8");
+		for(time=0;time<99999999;time++);
+			system("color b9");
+	}
+}
