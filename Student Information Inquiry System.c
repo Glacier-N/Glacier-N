@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-
+ 
 typedef struct{
     char id[30];
     char name[30];
